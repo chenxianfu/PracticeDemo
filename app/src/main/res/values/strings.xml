@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">PracticeDemo</string>
+    <string name="app_name">Cxfjushifenxi3</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="fragment_1">第一个</string>
+    <string name="fragment_2">第二个</string>
+    <string name="fragment_3">第三个</string>
+    <string name="fragment_4">第四个</string>
+
+
 </resources>
