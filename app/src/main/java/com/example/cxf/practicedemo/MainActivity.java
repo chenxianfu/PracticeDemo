@@ -11,7 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Context c;
-    private Button button_1,button_2,button_3,button_4;
+    private Button button_1,button_2,button_3,button_4,button_5,button_6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_2.setOnClickListener(this);
         button_3.setOnClickListener(this);
         button_4.setOnClickListener(this);
+        button_5.setOnClickListener(this);
+        button_6.setOnClickListener(this);
     }
 
     private void initView() {
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_2= (Button) findViewById(R.id.button_2);
         button_3= (Button) findViewById(R.id.button_3);
         button_4= (Button) findViewById(R.id.button_4);
+        button_5= (Button) findViewById(R.id.button_5);
+        button_6= (Button) findViewById(R.id.button_6);
     }
 
     @Override
@@ -55,6 +59,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_4:
                 intent.setClass(this,Buttot4Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_5:
+                intent.setClass(this,Buttot5Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_6:
+                intent.setClass(this,Buttot6Activity.class);
                 startActivity(intent);
                 break;
         }

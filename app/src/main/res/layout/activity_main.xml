@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cxf.cxfjushifenxi3.MainActivity">
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button_1"
@@ -33,6 +33,12 @@
     <Button
         android:id="@+id/button_5"
         android:text="ConstraintLayoutdemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_6"
+        android:text="测试收缩"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

@@ -20,6 +20,7 @@
         <activity android:name=".Button2Activity"></activity>
         <activity android:name=".Button3Activity"></activity>
         <activity android:name=".Buttot4Activity"></activity>
+        <activity android:name=".Buttot6Activity"></activity>
 
     </application>
 
