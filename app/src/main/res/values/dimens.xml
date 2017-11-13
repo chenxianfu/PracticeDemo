@@ -92,6 +92,8 @@
     <!-- 小于10dp的xml文件里的  ============================================================================================================ -->
     <!-- 项目圆角弧度，主要为button弧度 -->
     <dimen name="radius_sharp_lib">5dp</dimen>
+    <dimen name="text_pad"> 8dp</dimen>
+    <dimen name="app_margin">8dp</dimen>>
 
 
 </resources>

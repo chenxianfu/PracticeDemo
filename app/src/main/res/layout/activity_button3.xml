@@ -81,7 +81,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.cxf.cxfjushifenxi3.fragment.MyFragmentTabHost
+    <com.example.cxf.practicedemo.fragment.MyFragmentTabHost
         android:id="@+id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -99,5 +99,5 @@
             android:layout_weight="0"
             android:visibility="gone" />
 
-    </com.cxf.cxfjushifenxi3.fragment.MyFragmentTabHost>
+    </com.example.cxf.practicedemo.fragment.MyFragmentTabHost>
 </RelativeLayout>

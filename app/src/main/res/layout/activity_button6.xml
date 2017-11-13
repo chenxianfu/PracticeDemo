@@ -1,233 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/include_title"
-        layout="@layout/include_title" />
 
-    <Button
-        android:id="@+id/btn_sure"
+
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/btn_bottom_height_lib"
-        android:layout_alignParentBottom="true"
-        android:text="确定"
-        android:textColor="@color/white"
-        android:textSize="@dimen/font_size_big_lib" />
+        android:layout_height="match_parent" />
 
-
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/ll_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_sure"
-        android:layout_below="@+id/include_title">
+        android:layout_height="@dimen/text_height_lib"
+        android:background="@color/accent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/include_title"
-            android:background="@color/white"
-            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_hint"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/item_height_lib"
-                android:layout_marginLeft="12dp"
-                android:background="@color/white"
-                android:drawablePadding="@dimen/text_pad_middle_lib"
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+           >
+
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@null"
                 android:gravity="center_vertical"
-                android:text="徙木信用"
-                android:textColor="@color/text_black"
-                android:textSize="@dimen/font_size_mid_lib" />
+                android:hint="请输入"
+                android:textSize="16dp"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/black" />
 
-            <LinearLayout
-                android:id="@+id/ll_submit_phone"
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginRight="22dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/sdv_take_positive"
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="6dp"
-                   />
-
-
-                <ImageView
-                    android:id="@+id/sdv_take_nagative"
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="6dp"
-                   />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/rl_error_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="22dp"
-                android:layout_marginRight="22dp">
-
-                <TextView
-                    android:id="@+id/tv_take_positive_error"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/sdv_take_positive"
-                    android:layout_marginRight="6dp"
-                    android:text="请重新上传正面照片!"
-                    android:textColor="@color/red"
-                    android:textSize="@dimen/font_size_esmall_lib"
-                    android:visibility="invisible" />
-
-                <TextView
-                    android:id="@+id/tv_take_nagative_error"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/sdv_take_positive"
-                    android:layout_marginLeft="6dp"
-                    android:text="请重新上传反面照片!"
-                    android:textColor="@color/red"
-                    android:textSize="@dimen/font_size_esmall_lib"
-                    android:visibility="invisible" />
-
-
-            </LinearLayout>
-
-            <View
-                android:id="@+id/il_line"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/line_bg_height_lib"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="9dp"
-                android:background="@color/line_bg" />
-
-            <TextView
-                android:id="@+id/emv_debit_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="@dimen/item_height_lib"
-               />
-
-            <include layout="@layout/include_app_line_full" />
-
-            <TextView
-                android:id="@+id/emv_open_debit_bank"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="@dimen/item_height_lib"
-               />
-
-            <include layout="@layout/include_app_line_full" />
-
-            <TextView
-                android:id="@+id/emv_belong_branch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="@dimen/item_height_lib"
-             />
-
-            <include layout="@layout/include_app_line_full" />
-
-            <TextView
-                android:id="@+id/emv_debit_tel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="@dimen/item_height_lib"
-               />
-
-            <include layout="@layout/include_app_margin" />
-
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/item_height_lib">
-
-                <TextView
-                    android:id="@+id/tv_is_credit_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:drawablePadding="@dimen/text_pad_middle_lib"
-                    android:gravity="center"
-                    android:paddingLeft="12dp"
-                    android:text="信用卡"
-                    android:textColor="@color/text_black"
-                    android:textSize="@dimen/font_size_mid_lib" />
-
-                <android.support.v7.widget.SwitchCompat
-                    android:id="@+id/swict_credit_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="12dp"
-                    android:textColorHint="@color/text_gray" />
-            </RelativeLayout>
-
-            <include layout="@layout/include_app_line_full" />
-
-            <LinearLayout
-                android:id="@+id/ll_credit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="visible">
-
-                <TextView
-                    android:id="@+id/emv_credit_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="@dimen/item_height_lib"
-                    />
-
-                <include layout="@layout/include_app_line_full" />
-
-                <TextView
-                    android:id="@+id/emv_open_credit_bank"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="@dimen/item_height_lib"
-                   />
-
-                <include layout="@layout/include_app_line_full" />
-
-                <TextView
-                    android:id="@+id/emv_credit_limit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="@dimen/item_height_lib"
-                    />
-
-                <include layout="@layout/include_app_line_full" />
-
-                <TextView
-                    android:id="@+id/emv_credit_tel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="@dimen/item_height_lib"
-                   />
-
-                <include layout="@layout/include_app_line_full" />
-
-                <EditText
-                    android:id="@+id/emv_credit_remain"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="@dimen/item_height_lib"
-                 />
-            </LinearLayout>
-
-            <include layout="@layout/include_app_margin" />
-        </LinearLayout>
-
-    </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
  * change:
  */
 
-class Buttot5Activity extends AppCompatActivity {
+public class Buttot5Activity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
