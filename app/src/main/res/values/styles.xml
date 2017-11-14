@@ -15,4 +15,10 @@
         <item name="color">@android:color/white</item>
     </style>
 
+    <!-- activity theme. -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>

@@ -44,7 +44,7 @@
     <Button
         android:id="@+id/button_6"
         android:textAllCaps="false"
-        android:text="测试收缩"
+        android:text="测试toolbar渐变(仿京东)"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
