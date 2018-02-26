@@ -8,7 +8,7 @@
         android:id="@+id/ll_p_place_contract"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/text_pad_big_lib"
+        android:layout_marginBottom="@dimen/pading_middle"
         android:orientation="vertical"
         android:visibility="visible">
 
@@ -16,48 +16,33 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/item_height_lib">
+            android:layout_height="@dimen/item_height">
 
             <TextView
                 android:id="@+id/emv_p_place_contract"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/item_height_lib"
+                android:layout_height="@dimen/item_height"
                 android:drawableLeft="@drawable/point_red"
-                android:drawablePadding="@dimen/text_pad_middle_lib"
+                android:drawablePadding="@dimen/pading_middle"
                 android:gravity="center"
                 android:textColor="@color/text_black"
-                android:textSize="@dimen/font_size_mid_lib" />
+                android:textSize="@dimen/font_size_big" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/emv_p_place_contract"
                 android:gravity="center"
-                android:text="woeoa"
-                android:textColor="@color/text_gray"
-                android:textSize="@dimen/font_size_emsmall_lib" />
+                android:text="Glide测试代码"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_small" />
         </RelativeLayout>
 
-        <GridView
-            android:id="@+id/gv_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="4"
-            android:verticalSpacing="4dp"
-            >
-        </GridView>
-
-        <TextView
-            android:id="@+id/tv_p_place_contract_error"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sdv_take_positive"
-            android:layout_marginLeft="@dimen/text_pad_big_lib"
-            android:text="请重新上传照片!"
-            android:textColor="@color/red"
-            android:textSize="@dimen/font_size_esmall_lib"
-            android:visibility="gone" />
-
+        <ImageView
+            android:id="@+id/glide_image"
+            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
     </LinearLayout>
 
 </LinearLayout>

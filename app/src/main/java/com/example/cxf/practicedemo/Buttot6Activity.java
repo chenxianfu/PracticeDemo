@@ -59,7 +59,7 @@ public class Buttot6Activity extends AppCompatActivity implements TranslucentScr
     }
 
     private void initMeasure() {
-        headerHeight = getResources().getDimension(R.dimen.dimin_300);
+        headerHeight = getResources().getDimension(R.dimen.font_size_small);
         minHeaderHeight = getResources().getDimension(R.dimen.abc_action_bar_default_height_material);
 
     }

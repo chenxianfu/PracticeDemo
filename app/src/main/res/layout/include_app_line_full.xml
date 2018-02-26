@@ -6,7 +6,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/line_bg_height_lib"
+        android:layout_height="@dimen/text_line_height"
         android:background="@color/line_bg"/>
 
 </LinearLayout>

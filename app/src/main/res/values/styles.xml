@@ -21,4 +21,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+    <style name="text_style_black_middle" >
+        <item name="android:paddingLeft">@dimen/pading_middle</item>
+        <item name="android:paddingRight">@dimen/pading_middle</item>
+        <item name="android:textSize">@dimen/font_size_middle</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
 </resources>

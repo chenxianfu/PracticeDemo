@@ -1,100 +1,32 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="dimin_300">300dp</dimen>
-
-
-    <!-- Default screen margins, per the Android Design guidelines. -->
     <!-- 注意:添加必须写明注释 -->
 
 
     <!-- 文字大小模块  ============================================================================================================ -->
-    <!-- 文字小 -->
-    <dimen name="font_size_bsmall_lib">14dp</dimen>
-    <dimen name="font_size_small_lib">13dp</dimen>
-    <dimen name="font_size_esmall_lib">11dp</dimen>
-    <dimen name="font_size_emsmall_lib">12dp</dimen>
-    <!-- 文字中 -->
-    <dimen name="font_size_mid_lib">15dp</dimen>
-    <!-- 文字大 -->
-    <dimen name="font_size_big_lib">17dp</dimen>
-    <!-- 文字大大 -->
-    <dimen name="font_size_max_lib">20dp</dimen>
-    <dimen name="font_size_max_max_lib">32dp</dimen>
+    <dimen name="font_size_small">12dp</dimen>
+    <dimen name="font_size_middle">14dp</dimen>
+    <dimen name="font_size_big">16dp</dimen>
 
-    <!-- 文字左右间隔模块模块  ============================================================================================================ -->
-    <!-- 文字左右间隔 -->
-    <dimen name="text_pad_lib">8dp</dimen>
-    <dimen name="text_pad_big_lib">12dp</dimen>
-    <!-- 文字左右间隔小 -->
-    <dimen name="text_pad_middle_lib">4dp</dimen>
 
-    <!-- drawablePad间隔 -->
-    <dimen name="drawable_pad">5dp</dimen>
-    <dimen name="drawable_padding">8dp</dimen>
-    <dimen name="drawable_padding_big">12dp</dimen>
-    <dimen name="drawable_margin">10dp</dimen>
 
     <!-- 控件间隔模块  ============================================================================================================ -->
     <!--线条-->
-    <dimen name="line_bg_height_lib">0.7dp</dimen>
-    <!-- 项目组建相隔高度 -->
-    <dimen name="app_margin_lib">8dp</dimen>
-    <dimen name="app_margin_double_lib">16dp</dimen>
+    <dimen name="text_line_height">0.7dp</dimen>
+
+    <!--pading 以及margin间距模块-->
+    <dimen name="pading_small">4dp</dimen>
+    <dimen name="pading_middle">8dp</dimen>
+    <dimen name="pading_big">16dp</dimen>
+
+    <!-- 项目横条item的高度  ============================================================================================================ -->
+    <dimen name="item_height">48dp</dimen>
+
+    <!-- 标题栏高度 或者底部按钮的高度 -->
+    <dimen name="title_height">56dp</dimen>
 
 
-    <!-- 图片(有大图和小icon)模块  ============================================================================================================ -->
-    <!-- 商品缩略图宽 -->
-    <dimen name="image_width_big_lib">80dp</dimen>
-    <dimen name="image_height_big_lib">80dp</dimen>
-    <!-- 圆形消息提示信息的宽度 -->
-    <dimen name="msg_width_lib">15dp</dimen>
-    <dimen name="msg_width_small_lib">10dp</dimen>
-
-
-    <!-- 横条(包括标题横条 内容的横条 底部的控件横条)模块  ============================================================================================================ -->
-    <!-- 项目中最小宽度的设置 -->
-    <dimen name="min_width_lib">120dp</dimen>
-    <dimen name="min_width_mid_lib">90dp</dimen>
-    <dimen name="min_width_small_lib">60dp</dimen>
-    <dimen name="min_height_small_lib">60dp</dimen>
-
-    <!-- switch高度 选择器里面每个内容的高度 -->
-    <dimen name="switch_height_lib">30dp</dimen>
-
-    <!-- 标题栏高度 -->
-    <dimen name="title_height_lib">56dp</dimen>
-    <!-- 项目item的高度，文本框高度 -->
-    <dimen name="text_height_lib">48dp</dimen>
-    <dimen name="item_height_lib">40dp</dimen>
-    <!-- 项目item的高度，文本框高度 -->
-    <dimen name="text_height_mid_lib">24dp</dimen>
-    <!-- 项目item分类高度 -->
-    <dimen name="cate_height_lib">32dp</dimen>
-
-    <!-- 项目button宽度 大-->
-    <dimen name="btn_width_lib">80dp</dimen>
-
-    <!-- 项目button高度 -->
-    <dimen name="btn_height_big_lib">56dp</dimen>
-
-    <dimen name="btn_height_lib">40dp</dimen>
-
-    <dimen name="btn_height_mid_lib">32dp</dimen>
-
-    <!-- 底部按钮高度/底部按钮栏高度 -->
-    <dimen name="btn_bottom_height_lib">50dp</dimen>
-
-    <!-- 项目button高度small -->
-    <dimen name="btn_height_small_lib">28dp</dimen>
-
-
-    <!-- 小于10dp的xml文件里的  ============================================================================================================ -->
     <!-- 项目圆角弧度，主要为button弧度 -->
-    <dimen name="radius_sharp_lib">5dp</dimen>
-    <dimen name="text_pad"> 8dp</dimen>
-    <dimen name="app_margin">8dp</dimen>>
-
+    <dimen name="radius_sharp">5dp</dimen>
 
 </resources>
