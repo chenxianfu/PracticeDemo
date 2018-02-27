@@ -28,6 +28,7 @@
         <activity android:name=".Buttot7Activity"></activity>
         <activity android:name=".Buttot8Activity"></activity>
         <activity android:name=".Buttot9Activity"></activity>
+        <activity android:name=".activity.CoordinatorLayoutActivity"/>
 
     </application>
 

@@ -61,8 +61,9 @@ public class MainActivity extends AppCompatActivity{
             intent.setClass(context,Button3Activity.class);
 
         }else if (3==position){
-            intent.setClass(context,Button1Activity.class);
-
+            intent.setClass(context,CoordinatorLayoutActivity.class);
+        }else if (4==position){
+            intent.setClass(context,CoordinatorLayoutSecondActivity.class);
         }
 
         startActivity(intent);
@@ -74,6 +75,11 @@ public class MainActivity extends AppCompatActivity{
         itemList.add("主布局之TabhostFragment");
         itemList.add("主布局之viewpager+fragment");
         itemList.add("渐变效果之CoordinatorLayout");
+        itemList.add("渐变效果之CoordinatorLayoutSecond(仿知乎动画模式)");
     }
 
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+    }
 }
