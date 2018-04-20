@@ -17,6 +17,11 @@ public class VideoMainFragment extends BaseFragment{
         return R.layout.fragment_base;
     }
 
+    @Override
+    protected void initView() {
+
+    }
+
     public static VideoMainFragment newInstance(String s) {
         VideoMainFragment fragment = new VideoMainFragment();
         Bundle args = new Bundle();

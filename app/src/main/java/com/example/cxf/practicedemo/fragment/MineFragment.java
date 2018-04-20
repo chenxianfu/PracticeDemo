@@ -17,11 +17,8 @@ public class MineFragment extends BaseFragment {
         return R.layout.fragment_base;
     }
 
-    public static MineFragment newInstance(String s) {
-        MineFragment fragment = new MineFragment();
-        Bundle args = new Bundle();
-        args.putString("agrs1", s);
-        fragment.setArguments(args);
-        return fragment;
+    @Override
+    protected void initView() {
+
     }
 }

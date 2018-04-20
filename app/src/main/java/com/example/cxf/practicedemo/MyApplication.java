@@ -15,6 +15,8 @@ public class MyApplication extends Application {
 
 
     private RefWatcher refWatcher;
+    private static MyApplication application;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -23,8 +25,13 @@ public class MyApplication extends Application {
 //        }
 //        LeakCanary.install(this);
 
+        application =this;
         // 内存泄漏检测
         refWatcher = setupLeakCanary();
+    }
+
+    public static Context getAppContext() {
+        return application;
     }
 
     private RefWatcher setupLeakCanary() {

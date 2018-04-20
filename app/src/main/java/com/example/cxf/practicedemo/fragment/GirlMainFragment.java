@@ -17,11 +17,8 @@ public class GirlMainFragment extends BaseFragment{
         return R.layout.fragment_base;
     }
 
-    public static GirlMainFragment newInstance(String s) {
-        GirlMainFragment fragment = new GirlMainFragment();
-        Bundle args = new Bundle();
-        args.putString("agrs1", s);
-        fragment.setArguments(args);
-        return fragment;
+    @Override
+    protected void initView() {
+
     }
 }
