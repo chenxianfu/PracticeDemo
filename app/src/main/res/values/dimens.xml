@@ -2,12 +2,10 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <!-- 注意:添加必须写明注释 -->
 
-
     <!-- 文字大小模块  ============================================================================================================ -->
     <dimen name="font_size_small">12dp</dimen>
     <dimen name="font_size_middle">14dp</dimen>
     <dimen name="font_size_big">16dp</dimen>
-
 
 
     <!-- 控件间隔模块  ============================================================================================================ -->
@@ -17,13 +15,15 @@
     <!--pading 以及margin间距模块-->
     <dimen name="pading_small">4dp</dimen>
     <dimen name="pading_middle">8dp</dimen>
-    <dimen name="pading_big">16dp</dimen>
+    <dimen name="pading_big">12dp</dimen>
+    <dimen name="pading_max">16dp</dimen>
 
     <!-- 项目横条item的高度  ============================================================================================================ -->
-    <dimen name="item_height">48dp</dimen>
+    <dimen name="item_height">40dp</dimen>
 
     <!-- 标题栏高度 或者底部按钮的高度 -->
-    <dimen name="title_height">56dp</dimen>
+    <dimen name="title_height">50dp</dimen>
+    <dimen name="buttom_height">50dp</dimen>
 
 
     <!-- 项目圆角弧度，主要为button弧度 -->

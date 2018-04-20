@@ -5,99 +5,23 @@
     <color name="accent">#FFFFFF</color>
     <color name="app_color">#000000</color>
 
-    <color name="white_bar_red">#e40110</color>
-
-    <!-- 项目字体颜色色  主要-->
-    <!--正文主题 黑色-->
-    <color name="text_black">#333333</color>
-    <color name="tab_text_black">#424242</color>
-    <!--说明类型文字灰色-->
-    <color name="text_gray">#808080</color>
-    <!--价格/状态的橙色-->
-    <color name="text_orange">#eb5300</color>
-    <color name="text_blue_message">#1592db</color>
-    <color name="text_orange_trans">#19eb5300</color>
-    <!--输入项的占位提示颜色-->
-    <color name="hint_gray">#b3b3b3</color>
-
-    <!--表个条目的分割线-->
+    <!--app的基础色调-->
+    <color name="base_color">#eb5300</color>
+    <!--条目的分割线-->
     <color name="text_line">#e5e5e5</color>
     <!--统一的背景颜色-->
     <color name="background_color">#efeff4</color>
-    <color name="background_color_trans">#80efeff4</color>
-    <!--不闪眼镜的白色-->
-    <color name="little_gray_white">#F5F5F5</color>
+    <!--系统里面的白色-->
+    <color name="white">#F5F5F5</color>
+    <!--输入项的占位提示颜色-->
+    <color name="hint_gray">#b3b3b3</color>
 
-    <!--这个是侧滑删除里面出现编辑和删除的那个编辑颜色 用于和项目里orange做区分  也做项目里面搜索出来的高亮显示颜色-->
-    <color name="text_yellow_orange">#f7921e</color>
+    <!--正文主题 黑色-->
+    <color name="text_black">#333333</color>
+    <!--说明类型文字灰色-->
+    <color name="text_gray">#808080</color>
+    <!--文字橘黄色-->
+    <color name="text_orange">#eb5300</color>
 
-    <!-- 搜索背景色 -->
-    <color name="search_gray">#efeff0</color>
-    <!-- 搜索透明背景色 -->
-    <color name="search_gray_trans">#88efeff0</color>
 
-    <!--评分字体颜色-->
-    <!-- 字体蓝色 -->
-    <color name="text_blue">#3460a4</color>
-    <color name="text_button_blue">#1592db</color>
-    <color name="line_bg">#88E6E6CC</color>
-    <color name="blood_red">#ff0000</color>
-    <color name="transparent">#00ffffff</color>
-    <color name="half_transparent_black">#80000000</color>
-    <color name="graygreen">#55AA99</color>
-    <color name="gray_btn">#E0DFE0</color>
-    <color name="white_trans">#DDFFFFFF</color>
-
-    <!-- 黑色  透明 -->
-    <color name="province_line_border">#C7C7C7</color>
-
-    <!-- 蓝色 -->
-    <color name="blue">#0066ff</color>
-    <color name="green">#00b383</color>
-    <color name="orange">#ff6e32</color>
-    <color name="red">#ed0403</color>
-    <color name="white">#FFFFFF</color>
-    <!-- 黑色 -->
-    <color name="black">#ff000000</color>
-
-    <!-- 黑色 -->
-    <color name="black_2">#66000000</color>
-    <color name="black_statusbar">#33000000</color>
-
-    <!-- 亮灰色 -->
-    <color name="lightgray">#D3D3D3</color>
-    <!-- wheelpick里面的透明色-->
-    <color name="lightgray_trans">#88DDDDDD</color>
-
-    <color name="login_back">#3DD3C6</color>
-
-    <color name="gray_dark">#44808080</color>
-
-    <color name="trans_black">#66000000</color>
-    <color name="transdark_black">#B2000000</color>
-    <!-- 系统主题绿 -->
-    <color name="app_color_light">#34d8c0</color>
-
-    <!--系统按钮灰色-->
-    <color name="app_button_unclick">#cccccc</color>
-
-    <!-- selectSpecTextView un select bg -->
-    <color name="selectSpectextview_unselect_bg">#f7f7f7</color>
-    <color name="selectSpectextview_select_bg">#fdede5</color>
-
-    <!-- 我的优惠券 -->
-    <color name="orange_user_now">#F37D19</color>
-    <color name="blue_give_now">#177DD2</color>
-
-    <!--优惠统计-二期色值改变-->
-    <color name="c_online">#facd89</color>
-    <color name="c_offline">#f29ec2</color>
-    <color name="c_inshop">#e50150</color>
-    <color name="c_business">#0075aa</color>
-    <color name="c_shop">#7ecdf4</color>
-    <color name="wheel_bg">#b3b3b3</color>
-    <color name="wheel_bg_trans">#88b3b3b3</color>
-
-    <!-- 灰色 -->
-    <color name="datapicker_broder">#e1e1e6</color>
 </resources>

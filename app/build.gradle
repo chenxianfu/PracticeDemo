@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 27
     buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId "com.example.cxf.practicedemo"
@@ -31,12 +31,21 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
 
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.android.support:design:25.1.0'
-    compile 'com.android.support:support-compat:25.1.0'
+    compile 'com.android.support:appcompat-v7:27..0.2'
+    compile 'com.android.support:design:27.0.2'
+    compile 'com.android.support:recyclerview-v7:27.0.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     //glide
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:glide:4.6.1'
+    /*好像是一个注释处理器*/
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+
+    //内存泄漏
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //BottomNavigation的添加依赖 MD 设计的一部分
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
 }
 

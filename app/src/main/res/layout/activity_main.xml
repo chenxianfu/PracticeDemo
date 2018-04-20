@@ -3,90 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
+        android:id="@+id/ll_content"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/title_height"
-        android:gravity="center"
-        android:text="练习"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_size_big" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"/>
 
-    <include layout="@layout/include_app_line_full" />
-
-    <GridView
-        android:id="@+id/gl_view"
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/bottom_navigation_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="1"
-        />
-
-    <!--<Button-->
-        <!--android:id="@+id/button_1"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="侧滑+fragment"-->
-        <!--android:textAllCaps="false" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="FragmentTabHost模式"-->
-        <!--android:textAllCaps="false" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_3"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="tabhoast聚饰模式"-->
-        <!--android:textAllCaps="false" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_4"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="fragment+viewpager"-->
-        <!--android:textAllCaps="false" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_5"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/app_name"-->
-        <!--android:textAllCaps="false" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_6"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="测试toolbar渐变(仿京东)"-->
-        <!--android:textAllCaps="false" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_7"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="测试imageView自动排列"-->
-        <!--android:textAllCaps="false" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_8"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="GlideDemo"-->
-        <!--android:textAllCaps="false" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_9"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="圆角image"-->
-        <!--android:textAllCaps="false" />-->
+        android:layout_height="@dimen/buttom_height"
+        android:layout_alignParentBottom="true" />
 
 </LinearLayout>

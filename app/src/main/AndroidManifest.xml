@@ -4,8 +4,16 @@
 
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--写入SD卡的权限：如果你希望保存相机拍照后的照片-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--读取SD卡的权限:打开相册选取图片所必须的权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,16 +27,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Button1Activity"></activity>
-        <activity android:name=".Button2Activity"></activity>
-        <activity android:name=".Button3Activity"></activity>
-        <activity android:name=".Buttot4Activity"></activity>
-        <activity android:name=".Buttot6Activity"></activity>
-        <activity android:name=".Buttot5Activity"></activity>
-        <activity android:name=".Buttot7Activity"></activity>
-        <activity android:name=".Buttot8Activity"></activity>
-        <activity android:name=".Buttot9Activity"></activity>
-        <activity android:name=".activity.CoordinatorLayoutActivity"/>
+        <!--FileProvider共享文件 为7.0拍照所用-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+          android:authorities="com.example.cxf.practicedemo.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
 
     </application>
 
