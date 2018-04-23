@@ -12,7 +12,7 @@ public class Config {
 
     //http://192.68.75.27:8006 测试环境
     //http://192.68.75.20:8006 开发环境
-    public static String IP = "http://192.68.75.20:8006";
+    public static String IP = "http://fy.iciba.com/ajax.php/";
 
     public static final boolean DEBUG=true; // 发布记得改为false
 

@@ -5,15 +5,9 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/tv_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ssss"/>
+        android:layout_height="match_parent"
+        android:text="@string/app_name" />
 
-
-    <Button
-        android:id="@+id/bt_refresh"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/buttom_height"
-        android:text="刷新"/>
 </LinearLayout>

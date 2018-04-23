@@ -1,13 +1,16 @@
 package com.example.cxf.practicedemo.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.example.cxf.practicedemo.R;
+import com.example.cxf.practicedemo.activity.ChangeNewItemsActivity;
 import com.example.cxf.practicedemo.adapter.NewsFragmentPagerAdapter;
 import com.example.cxf.practicedemo.Config;
 import com.example.cxf.practicedemo.utils.CommontUtils;
@@ -52,6 +55,13 @@ public class NewsMainFragment extends BaseFragment{
         view_pager.setAdapter(adapter);
         tabs.setupWithViewPager(view_pager);
         CommontUtils.dynamicSetTabLayoutMode(tabs);
+
+        image_add_channal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),ChangeNewItemsActivity.class));
+            }
+        });
     }
 
     private void initNewsFragments() {

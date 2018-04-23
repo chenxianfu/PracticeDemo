@@ -14,6 +14,9 @@ import com.example.cxf.practicedemo.fragment.GirlMainFragment;
 import com.example.cxf.practicedemo.fragment.MineFragment;
 import com.example.cxf.practicedemo.fragment.NewsMainFragment;
 import com.example.cxf.practicedemo.fragment.VideoMainFragment;
+import com.example.cxf.practicedemo.rxbus.EventInfo;
+import com.example.cxf.practicedemo.rxbus.RxBus;
+import com.example.cxf.practicedemo.rxbus.RxEvent;
 
 public class MainActivity extends BaseActivity implements BottomNavigationBar.OnTabSelectedListener {
 
@@ -39,6 +42,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
         TAG = MainActivity.class.getSimpleName();
         Log.i(TAG, "initFragment");
         initFragment(savedInstanceState); //切换不要用replace,这样每次都会新建一个实例 和将之前实例销毁掉,影响性能
+
+        RxBus.getInstance().send(RxEvent.NoticeEvent.FINISH_ACTIVITY,new EventInfo(99));
     }
 
     @Override
@@ -148,4 +153,5 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
     public void onTabReselected(int position) {
 
     }
+
 }

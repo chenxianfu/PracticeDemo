@@ -47,5 +47,21 @@ dependencies {
 
     //BottomNavigation的添加依赖 MD 设计的一部分
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+
+    //gradle
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
+    //Retrofit的gson解析器
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //Rxandroid 这个不去调用你的 AndroidSchedulers.mainThread()出不来
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //Rxjava 没它不能去写 rx链式调用
+    compile 'io.reactivex.rxjava2:rxjava:2.1.1'
+
+    //这个是为了在  .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) 加的 将retrofit的call 转换成observer
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //okhttp的网络请求日志拦截器
+    compile 'com.squareup.okhttp3:logging-interceptor:3.7.0'
 }
 
