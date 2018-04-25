@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <attr name="type">
+    <attr name="type">
         <enum name="none" value="0" />
         <enum name="circle" value="1" />
         <enum name="rounded_rect" value="2" />
@@ -15,4 +15,14 @@
         <attr name="borderWidth" />
         <attr name="rectRoundRadius" />
     </declare-styleable>
+
+
+    <declare-styleable name="IRecyclerView">
+        <attr name="refreshHeaderLayout" format="reference" />
+        <attr name="loadMoreFooterLayout" format="reference" />
+        <attr name="refreshEnabled" format="boolean" />
+        <attr name="loadMoreEnabled" format="boolean" />
+        <attr name="refreshFinalMoveOffset" format="dimension" />
+    </declare-styleable>
+
 </resources>
