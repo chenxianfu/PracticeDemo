@@ -1,6 +1,8 @@
 package com.example.cxf.practicedemo.fragment;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,9 +13,11 @@ import android.view.ViewGroup;
 
 /**
  * Created by cxf on 2016/11/16.
+ * Fragment的基类
  */
 public abstract class BaseFragment extends Fragment {
     public View view;
+    public Activity activity;
 
     public static String TAG = BaseFragment.class.getSimpleName();
 
@@ -31,6 +35,7 @@ public abstract class BaseFragment extends Fragment {
             parent.removeView(view);
         }
 
+        activity = getActivity();
         initView();
 
         return view;

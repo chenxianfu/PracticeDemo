@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ssss"/>
 
-
-    <Button
-        android:id="@+id/bt_refresh"
+    <com.example.cxf.practicedemo.irecycleview.IRecyclerView
+        android:id="@+id/irc"
+        android:layout_below="@+id/ntb"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/buttom_height"
-        android:text="刷新"/>
-</LinearLayout>
+        app:loadMoreEnabled="true"
+        android:background="@color/background_color"
+        app:refreshHeaderLayout="@layout/layout_irecyclerview_refresh_header"
+        app:refreshEnabled="true"
+        />
+    <com.example.cxf.practicedemo.view.LoadingTip
+        android:id="@+id/loaded_tip"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

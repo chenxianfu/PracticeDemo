@@ -1,10 +1,30 @@
 <resources>
+    <!--常用规范语句-->
+
     <string name="app_name">鱼</string>
     <string name="open">打开</string>
     <string name="close">关闭</string>
+    <string name="sure">确定</string>
+    <string name="commit">提交</string>
+    <string name="cancle">取消</string>
+    <string name="back">返回</string>
+
+
+    <string name="net_error">网络访问错误，请稍后再试</string>
+    <string name="net_empty">还没有数据哦</string>
+    <string name="net_loading">请稍后...</string>
+    <string name="net_reload">重新尝试</string>
+    <string name="net_not">网络不可用,请检查你的网络</string>
+
+
     <string name="fragment_1">第一个</string>
     <string name="fragment_2">第二个</string>
     <string name="fragment_3">第三个</string>
     <string name="fragment_4">第四个</string>
+
+    <!-- 共享过度动画 -->
+    <string name="transition_photos">transition_animation_news_photos</string>
+    <string name="photo_collections">图集：%1$s</string>
+
 
 </resources>

@@ -26,6 +26,7 @@ public class CommontUtils {
             tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         }
     }
+
     private static int calculateTabWidth(TabLayout tabLayout) {
         int tabWidth = 0;
         for (int i = 0; i < tabLayout.getChildCount(); i++) {
@@ -35,10 +36,28 @@ public class CommontUtils {
         }
         return tabWidth;
     }
+
     public static int getScreenWith() {
         return MyApplication.getAppContext().getResources().getDisplayMetrics().widthPixels;
     }
+
     public static View getRootView(Activity context) {
         return ((ViewGroup) context.findViewById(android.R.id.content)).getChildAt(0);
     }
+
+
+    /**
+     * 判断一个字符串是否为null
+     *
+     * @param obj
+     * @return
+     */
+    public static boolean isEmpty(Object obj) {
+        String str = obj + "";
+        if (str.equals("") || str.equals("null")) {
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pading_middle"
+            android:layout_marginRight="@dimen/pading_middle"
+            android:layout_marginTop="@dimen/pading_middle"
+            android:singleLine="true"
+            android:text="测试新闻"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/font_size_middle" />
+
+        <LinearLayout
+            android:id="@+id/image_group"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_news_first"
+                style="@style/news_summary_photo_iv"
+                android:src="@drawable/no_pic" />
+
+            <ImageView
+                android:id="@+id/image_news_second"
+                style="@style/news_summary_photo_iv"
+                android:src="@drawable/no_pic" />
+
+            <ImageView
+                android:id="@+id/image_news_third"
+                style="@style/news_summary_photo_iv"
+                android:src="@drawable/no_pic" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_news_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="@dimen/pading_small"
+            android:layout_marginRight="@dimen/pading_middle"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_size_middle"
+            android:text="05-28 20:09" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,26 +1,31 @@
 package com.example.cxf.practicedemo.fragment;
 
-import android.app.Activity;
-import android.nfc.Tag;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.cxf.practicedemo.Config;
 import com.example.cxf.practicedemo.R;
+import com.example.cxf.practicedemo.adapter.NewsListAdapter;
 import com.example.cxf.practicedemo.api.ApiRetrofit;
 import com.example.cxf.practicedemo.api.ApiService;
+import com.example.cxf.practicedemo.bean.GirlResult;
+import com.example.cxf.practicedemo.bean.NewsSummary;
 import com.example.cxf.practicedemo.bean.TranslationBean;
-import com.example.cxf.practicedemo.rxbus.EventInfo;
-import com.example.cxf.practicedemo.rxbus.RxBus;
-import com.example.cxf.practicedemo.rxbus.RxEvent;
-import com.example.cxf.practicedemo.utils.JLog;
+import com.example.cxf.practicedemo.irecycleview.IRecyclerView;
+import com.example.cxf.practicedemo.irecycleview.OnLoadMoreListener;
+import com.example.cxf.practicedemo.irecycleview.OnRefreshListener;
+import com.example.cxf.practicedemo.irecycleview.animation.ScaleInAnimation;
+import com.example.cxf.practicedemo.irecycleview.widget.LoadMoreFooterView;
+import com.example.cxf.practicedemo.view.LoadingTip;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
@@ -32,12 +37,17 @@ import io.reactivex.schedulers.Schedulers;
  * @description:
  */
 
-public class NewsContentsFrament extends BaseFragment {
+public class NewsContentsFrament extends BaseFragment implements OnRefreshListener, OnLoadMoreListener {
 
     private String newsTitle = "";
 
-    private TextView textView;
-    private Button bt_refresh;
+    private IRecyclerView irc;
+    private LoadingTip loaded_tip;
+
+    private NewsListAdapter adapter;
+    private List<NewsSummary> list_news = new ArrayList<>();
+
+    private int startPage;
 
     @Override
     public int setLayout() {
@@ -47,41 +57,57 @@ public class NewsContentsFrament extends BaseFragment {
     @Override
     protected void initView() {
         TAG = NewsContentsFrament.class.getSimpleName();
-        RxBus.getInstance().register(RxEvent.NoticeEvent.FINISH_ACTIVITY,this);
-
-        textView = view.findViewById(R.id.text);
-        bt_refresh = view.findViewById(R.id.bt_refresh);
-
         Bundle bundle = getArguments();
         if (bundle!=null){
             newsTitle = bundle.getString(Config.NEWS_TITLES);
-            textView.setText(newsTitle);
         }
 
-        bt_refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doGet();
-            }
-        });
+        irc = view.findViewById(R.id.irc);
+        loaded_tip = view.findViewById(R.id.loaded_tip);
 
+        irc.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        adapter = new NewsListAdapter(activity,list_news);
+        adapter.openLoadAnimation(new ScaleInAnimation()); //动画添加
+        irc.setAdapter(adapter);
+        irc.setOnRefreshListener(this);
+        irc.setOnLoadMoreListener(this);
+
+
+//        doGetGirl();
         doGet();
+
     }
 
     private void doGet() {
         ApiRetrofit.getInstance().create(ApiService.class)
-                .getCall()
+                .getNewsList("T1348647909107",startPage)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(new Observer<TranslationBean>() {
+                .subscribeWith(new Observer<Map<String,List<NewsSummary>>>() {
                     @Override
                     public void onSubscribe(Disposable d) {
                         Log.d(TAG,"网络请求= onSubscribe" );
                     }
 
                     @Override
-                    public void onNext(TranslationBean translationBean) {
-                        Log.d(TAG,"网络请求= onNext" );
+                    public void onNext(Map<String,List<NewsSummary>> obj) {
+                        List<NewsSummary> newsSummaries =  obj.get("T1348647909107");
+
+                        if (newsSummaries != null) {
+                            startPage += 20;
+                            if (adapter.getPageBean().isRefresh()) {
+                                irc.setRefreshing(false);
+                                adapter.replaceAll(newsSummaries);
+                            } else {
+                                if (obj.size() > 0) {
+                                    irc.setLoadMoreStatus(LoadMoreFooterView.Status.GONE);
+                                    adapter.addAll(newsSummaries);
+                                } else {
+                                    irc.setLoadMoreStatus(LoadMoreFooterView.Status.THE_END);
+                                }
+                            }
+                        }
                     }
 
                     @Override
@@ -100,14 +126,28 @@ public class NewsContentsFrament extends BaseFragment {
 
 
 
-    public void onRxEvent(RxEvent event, EventInfo info) {
-        JLog.d(TAG, "onRxEvent event:" + event + ",info:" + info);
-        textView.setText(info.getIndex());
-    }
-
     @Override
     public void onDestroy() {
         super.onDestroy();
-        RxBus.getInstance().unregister(RxEvent.NoticeEvent.FINISH_ACTIVITY,this);
+    }
+
+    //刷新
+    @Override
+    public void onRefresh() {
+        adapter.getPageBean().setRefresh(true);
+        startPage = 0;
+        //发起请求
+        irc.setRefreshing(true);
+        doGet();
+//        doGetGirl();
+    }
+
+    //加载更多
+    @Override
+    public void onLoadMore(View loadMoreView) {
+        adapter.getPageBean().setRefresh(false);
+        //发起请求
+        irc.setLoadMoreStatus(LoadMoreFooterView.Status.LOADING);
+        doGet();
     }
 }

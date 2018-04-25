@@ -3,9 +3,10 @@
     <!-- 注意:添加必须写明注释 -->
 
     <!-- 文字大小模块  ============================================================================================================ -->
-    <dimen name="font_size_small">12dp</dimen>
-    <dimen name="font_size_middle">14dp</dimen>
-    <dimen name="font_size_big">16dp</dimen>
+    <dimen name="font_size_small">12sp</dimen>
+    <dimen name="font_size_middle">14sp</dimen>
+    <dimen name="font_size_big">16sp</dimen>
+    <dimen name="font_size_max">24sp</dimen>
 
 
     <!-- 控件间隔模块  ============================================================================================================ -->

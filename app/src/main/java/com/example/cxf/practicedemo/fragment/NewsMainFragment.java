@@ -27,7 +27,6 @@ import java.util.List;
 
 public class NewsMainFragment extends BaseFragment{
 
-    private Toolbar toolbar;
     private TabLayout tabs;
     private ImageView image_add_channal;
     private ViewPager view_pager;
@@ -56,6 +55,10 @@ public class NewsMainFragment extends BaseFragment{
         tabs.setupWithViewPager(view_pager);
         CommontUtils.dynamicSetTabLayoutMode(tabs);
 
+        setListener();
+    }
+
+    private void setListener() {
         image_add_channal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
