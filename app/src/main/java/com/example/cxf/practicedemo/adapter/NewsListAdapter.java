@@ -81,8 +81,8 @@ public class NewsListAdapter extends MultiItemRecycleViewAdapter<NewsSummary> {
         String imgSrc = newsSummary.getImgsrc();
 
         holder.setText(R.id.tv_top_title, title);
-        holder.setText(R.id.tv_middle_title, ptime);
-        holder.setText(R.id.tv_time, digest);
+        holder.setText(R.id.tv_middle_title, digest);
+        holder.setText(R.id.tv_time, ptime);
         holder.setImageUrl(R.id.image_news, imgSrc);
         holder.setOnClickListener(R.id.rl_root, new View.OnClickListener() {
             @Override

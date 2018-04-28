@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.example.cxf.practicedemo.view.HorizontalselectedView
+        android:id="@+id/hsv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        app:HorizontalselectedViewSeesize="6"
+        app:HorizontalselectedViewSelectedTextColor="@color/text_orange"
+        app:HorizontalselectedViewSelectedTextSize="14"
+        app:HorizontalselectedViewTextColor="@color/text_gray"
+        app:HorizontalselectedViewTextSize="12" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/hint_gray" />
+
+    <TextView
+        android:id="@+id/tv_viewpager_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="viewpager"
+        android:textColor="@color/text_black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/hint_gray" />
+</LinearLayout>

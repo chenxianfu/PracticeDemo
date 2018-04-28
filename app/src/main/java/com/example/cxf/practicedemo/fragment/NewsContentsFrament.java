@@ -10,9 +10,7 @@ import com.example.cxf.practicedemo.R;
 import com.example.cxf.practicedemo.adapter.NewsListAdapter;
 import com.example.cxf.practicedemo.api.ApiRetrofit;
 import com.example.cxf.practicedemo.api.ApiService;
-import com.example.cxf.practicedemo.bean.GirlResult;
 import com.example.cxf.practicedemo.bean.NewsSummary;
-import com.example.cxf.practicedemo.bean.TranslationBean;
 import com.example.cxf.practicedemo.irecycleview.IRecyclerView;
 import com.example.cxf.practicedemo.irecycleview.OnLoadMoreListener;
 import com.example.cxf.practicedemo.irecycleview.OnRefreshListener;
@@ -73,8 +71,6 @@ public class NewsContentsFrament extends BaseFragment implements OnRefreshListen
         irc.setOnRefreshListener(this);
         irc.setOnLoadMoreListener(this);
 
-
-//        doGetGirl();
         doGet();
 
     }
@@ -93,25 +89,33 @@ public class NewsContentsFrament extends BaseFragment implements OnRefreshListen
                     @Override
                     public void onNext(Map<String,List<NewsSummary>> obj) {
                         List<NewsSummary> newsSummaries =  obj.get("T1348647909107");
-
+                        irc.setRefreshing(false);
                         if (newsSummaries != null) {
                             startPage += 20;
                             if (adapter.getPageBean().isRefresh()) {
-                                irc.setRefreshing(false);
+
                                 adapter.replaceAll(newsSummaries);
                             } else {
-                                if (obj.size() > 0) {
+                                if (newsSummaries.size() > 0) {
                                     irc.setLoadMoreStatus(LoadMoreFooterView.Status.GONE);
                                     adapter.addAll(newsSummaries);
                                 } else {
                                     irc.setLoadMoreStatus(LoadMoreFooterView.Status.THE_END);
                                 }
                             }
+                        }else {
+                            loaded_tip.setLoadingTip(LoadingTip.LoadStatus.empty);
                         }
                     }
 
                     @Override
                     public void onError(Throwable e) {
+                        irc.setRefreshing(false);
+                        loaded_tip.setLoadingTip(LoadingTip.LoadStatus.error);
+                        if (adapter.getSize()>0){
+                            irc.setLoadMoreStatus(LoadMoreFooterView.Status.ERROR);
+                        }
+
                         Log.d(TAG,"网络请求= onError" );
 
                     }
@@ -119,7 +123,8 @@ public class NewsContentsFrament extends BaseFragment implements OnRefreshListen
                     @Override
                     public void onComplete() {
                         Log.d(TAG,"网络请求= onComplete" );
-
+                        irc.setRefreshing(false);
+                        loaded_tip.setLoadingTip(LoadingTip.LoadStatus.finish);
                     }
                 });
     }
@@ -139,7 +144,6 @@ public class NewsContentsFrament extends BaseFragment implements OnRefreshListen
         //发起请求
         irc.setRefreshing(true);
         doGet();
-//        doGetGirl();
     }
 
     //加载更多

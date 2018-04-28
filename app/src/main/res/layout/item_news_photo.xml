@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/pading_middle"
+    android:layout_marginRight="@dimen/pading_middle"
+    android:layout_marginTop="@dimen/pading_middle"
+    app:cardBackgroundColor="@color/background_color"
+    app:cardCornerRadius="@dimen/radius_sharp_small"
     app:cardElevation="2dp">
 
     <LinearLayout
@@ -27,7 +32,7 @@
         <LinearLayout
             android:id="@+id/image_group"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -54,9 +59,9 @@
             android:layout_gravity="right"
             android:layout_marginBottom="@dimen/pading_small"
             android:layout_marginRight="@dimen/pading_middle"
+            android:text="05-28 20:09"
             android:textColor="@color/text_gray"
-            android:textSize="@dimen/font_size_middle"
-            android:text="05-28 20:09" />
+            android:textSize="@dimen/font_size_middle" />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

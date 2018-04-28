@@ -30,4 +30,7 @@
     <!-- 项目圆角弧度，主要为button弧度 -->
     <dimen name="radius_sharp">5dp</dimen>
 
+
+    <dimen name="radius_sharp_small">2dp</dimen>
+
 </resources>

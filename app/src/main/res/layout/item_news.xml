@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginLeft="@dimen/pading_middle"
+    android:layout_marginRight="@dimen/pading_middle"
+    android:layout_marginTop="@dimen/pading_middle"
+    app:cardCornerRadius="@dimen/radius_sharp_small"
     app:cardElevation="2dp">
     <!--app:cardCornerRadius="2dp"-->
     <!--app:contentPadding="0dp"-->
@@ -11,9 +16,7 @@
     <RelativeLayout
         android:id="@+id/rl_root"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/background_color"
-        >
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/image_news"
