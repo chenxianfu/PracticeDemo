@@ -40,6 +40,10 @@
 
         <activity android:name=".activity.ChangeNewItemsActivity"/>
 
+        <activity android:name=".activity.TestFirstActivity"/>
+
+        <activity android:name=".activity.TestSecondActivity"/>
+
     </application>
 
 </manifest>

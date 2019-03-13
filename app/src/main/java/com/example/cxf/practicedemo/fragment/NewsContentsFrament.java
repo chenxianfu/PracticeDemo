@@ -55,6 +55,7 @@ public class NewsContentsFrament extends BaseFragment implements OnRefreshListen
     @Override
     protected void initView() {
         TAG = NewsContentsFrament.class.getSimpleName();
+
         Bundle bundle = getArguments();
         if (bundle!=null){
             newsTitle = bundle.getString(Config.NEWS_TITLES);
